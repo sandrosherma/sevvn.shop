@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sevnn - Home</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Sevnn</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/shop">Shop</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Explore our collection</h2>
+    <div class="product-preview">
+      <h3>Featured Products</h3>
+      <div class="featured-products">
+        {% for product in products %}
+          <a href="{{url_for('product_detail', product_id=product.id)}}" class="product-item">
+            <img src="{{product.image}}" alt="{{ product.name }}" />
+            <h4>{{ product.name }}</h4>
+            <p>${{ product.price }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="contact-info">
+
+    <div class="contact-item">
+      <span>Instagram: @sevvn.shop</span>
+    </div>
+    <div class="contact-item">
+      <span>TikTok: @sevvn.shop</span>
+    </div>
+
+  </footer>
+  
+</body>
+</html>

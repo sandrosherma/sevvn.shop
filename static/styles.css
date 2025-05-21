@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Layout */
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.product-preview {
+  margin-top: 40px;
+}
+
+.featured-products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-item {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-item h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Footer - Contact Information */
+.contact-info {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-item {
+  font-size: 1rem;
+}
+
+.contact-item span {
+  display: block;
+  margin: 5px 0;
+}
+
+/* Admin Panel Styles */
+.admin-container {
+  padding: 30px;
+  background-color: #111;
+  color: white;
+}
+
+.admin-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-form {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.admin-form input, .admin-form textarea, .admin-form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.admin-form input[type="file"] {
+  padding: 10px;
+}
+
+.admin-form button {
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: #555;
+}
+
+/* Table Styles */
+.product-table {
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #222;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #333;
+}
+
+.product-table tr:hover {
+  background-color: #444;
+}
+
+.product-actions button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.product-actions button:hover {
+  background-color: #c9302c;
+}
+
+/* Navigation Bar for Admin Panel */
+.admin-nav {
+  background-color: #222;
+  padding: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.admin-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+.admin-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .featured-products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item {
+    margin: 10px 0;
+  }
+
+  .product-table {
+    font-size: 0.9rem;
+  }
+
+  .admin-form input, .admin-form textarea, .admin-form button {
+    width: auto;
+  }
+}
+
+.product-detail {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: black;
+  color: white;
+}
+.product-image img {
+  max-width: 400px;
+  border-radius: 12px;
+}
+.product-info {
+  max-width: 600px;
+}
+
+.product-item {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.03);
+}

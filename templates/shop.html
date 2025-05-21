@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop - Sevnn</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Shop at Sevnn</h1>
+    <nav><a href="/">Home</a><a href="/shop">Shop</a></nav>
+  </header>
+<main>
+    <h2>Explore our latest fashion collection.</h2>
+    <div class="product-preview">
+      <h3>Featured Products</h3>
+      <div class="featured-products">
+        {% for product in products%}
+          <div class="product-item">
+            <a href="/product/{{ product.id }}">
+              <img src="{{ product.image }}" alt="{{ product.name }}"></a>  
+            <h4>{{ product.name }}</h4>
+            <p>${{ product.price }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+  <footer class="contact-info">
+    <div class="contact-item">
+      <span>Instagram: @sevnnshop</span>
+    </div>
+    <div class="contact-item">
+      <span>TikTok: @sevnnshop</span>
+    </div>
+  </footer>
+</body>
+</html>

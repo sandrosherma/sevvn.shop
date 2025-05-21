@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Detail - Sevnn</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .product-detail {
+      display: flex;
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      max-width: 900px;
+      width: 100%;
+      padding: 2rem;
+      gap: 3rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+    .product-image img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .product-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .product-info h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      color: #f0f0f0;
+    }
+    .product-info p.price {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #f0f0f0;
+    }
+    /* New style: description with subtle background */
+    .product-info p.description {
+      background-color: #2e2e2e;  /* slightly lighter dark grey */
+      padding: 1rem;
+      border-radius: 8px;
+      color: #bbbbbb;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .product-info p.sizes {
+      color: #dddddd;
+      font-style: italic;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-detail">
+    <div class="product-image">
+      <img src="{{product.image}}" alt="{{ product.name }}" />
+    </div>
+    <div class="product-info">
+      <h2>{{ product.name }}</h2>
+      <p class="price">${{ product.price }}</p>
+      <p class="description">{{ product.description }}</p>
+      <p class="sizes">Available sizes: XS | M | L | XL | XXL | 3XL | {{ product.sizes | join(', ') }}</p>
+      <p>To purchase contact us on TikTok/Instagram</p>
+    </div>
+  </div>
+</body>
+</html>
